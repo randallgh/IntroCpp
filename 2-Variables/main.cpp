@@ -77,12 +77,7 @@ float areaOfRectangle(float width, float height)
 	return width * height;
 }
 
-float averageOfFive(float a[])
-{
-
-}
-
-int main()
+void closedPractice()
 {
 	myFinalForm1();
 	myFinalForm2();
@@ -104,12 +99,67 @@ int main()
 
 	std::cout << "Enter the height of a rectangle\n";
 	float rectHeight = 0.0f;
-	std::cin >> rectHeight;	
+	std::cin >> rectHeight;
 
 	std::cout << "Area: " << areaOfRectangle(rectWidth, rectHeight) << "\n\n";
+}
+
+float averageOfFive(int a[])
+{
+	float sum = 0;
+	for (int i = 0; i < 5; i++)
+	{
+		sum += a[i];
+	}
+
+	return sum/5.0f;
+}
+
+void openPractice()
+{
+	int input = 0;
+	int inputArray[5];
+
+	std::cout << "Please input five integers. \n";
+
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << "Input a integer: ";
+		std::cin >> input;
+		std::cout << "\n";
+		inputArray[i] = input;
+	}
+
+	std::cout << averageOfFive(inputArray) << std::endl;
+
+	int x = 13;
+	int y = 24;
+
+	std::cout << "X: " << x << std::endl;
+	std::cout << "Y: " << y << "\n\n";
 
 
+	x = x + y;
+	y = x - y;
+	x = x - y;
 
+	std::cout << "X: " << x << std::endl;
+	std::cout << "Y: " << y << std::endl;
+
+	int inputAge = 0;
+
+	std::cout << "Input your age: ";
+	std::cin >> inputAge;
+
+
+	std::cout << "Howdy! You are " << inputAge << " years old!\n";
+	std::cout << "You’ve been alive for at least " << 12 * inputAge << " months!\n";
+}
+
+int main()
+{
+	//closedPractice();
+	openPractice();
 
 	system("PAUSE");
 	return 0;
