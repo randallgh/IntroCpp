@@ -69,17 +69,17 @@ void closedPractice()
 	{
 		std::cout << "You are a minor.";
 	}
-	else if (userAge > 50)
-	{
-		std::cout << "You are elegible tto join AARP";
-	}
-	else if (userAge > 65)
-	{
-		std::cout << "You are elegible to get retirement benefits.";
-	}
 	else if (userAge >= 18)
 	{
 		std::cout << "You are an adult";
+	}
+	if (userAge > 50)
+	{
+		std::cout << "You are elegible tto join AARP";
+	}
+	if (userAge > 65)
+	{
+		std::cout << "You are elegible to get retirement benefits.";
 	}
 
 	printEndLine(2);
@@ -420,4 +420,4 @@ int main()
 
 	system("PAUSE");
 	return 0;
-}
+}	
