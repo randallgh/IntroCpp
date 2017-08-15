@@ -158,10 +158,9 @@ void openPractice()
 
 int main()
 {
-	//closedPractice();
+	closedPractice();
 	openPractice();
 
 	system("PAUSE");
 	return 0;
 }
-
