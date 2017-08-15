@@ -397,6 +397,18 @@ void preHistoricBattle()
 		std::cout << "EAT YOUR ORANGES." << std::endl;
 	}
 
+	std::cout << "Dino Score: " << dinoScore << ", Player Score: " << playerScore << std::endl;
+	if(playerScore > dinoScore){
+		std::cout << "Player wins! " << std::endl;
+	}
+	else if (playerScore < dinoScore)
+	{
+		std::cout << "You have been defeated. " << std::endl;
+	}
+	else if (playerScore == dinoScore)
+	{
+		std::cout << "You are equally matched with your enemy dino" << std::endl;
+	}
 }
 
 int main()
