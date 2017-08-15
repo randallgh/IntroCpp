@@ -235,6 +235,7 @@ void openPractice()
 	//
 	//              If nearest power is zero, provide an error message.
 
+	/*
 	int textureSize = 0;
 	std::cout << "Input a texture size with a multiple of 2. " << std::endl;
 	std::cin >> textureSize;
@@ -249,7 +250,7 @@ void openPractice()
 		textureSize = textureSize / 2;
 		textureSize = textureSize * 2;
 	}
-
+	*/
 
 }
 
@@ -266,8 +267,135 @@ void disposableCalculator()
 	std::cout << "Enter a operator. + - / * " << std::endl;
 	std::cin >> op;
 
+	float result = 0;
+
+	switch (op)
+	{
+	case '+':
+		result = numOne + numTwo;
+		break;
+	case '-':
+		result = numOne - numTwo;
+	case '/':
+		result = (float)numOne / (float)numTwo;
+	case '*':
+		result = numOne * numTwo;
+		break;
+	default:
+		break;
+	}
+
+	std::cout << "Result: " << result << std::endl;
+
+}
+
+void preHistoricBattle()
+{
+	int playerScore = 0;
+	int dinoScore = 0;
+
+	int dinoStrength = 4;
+	int dinoWeapon = 2;
+	int dinoBattles = 2;
+	char dinoSleep = 'y';
 
 
+	int strength = 0;
+	std::cout << "How would you rate your strength on a scale of 1 to 10?" << std::endl;
+	std::cin >> strength;
+	
+	//Strength Check
+	if (strength > dinoStrength)
+	{
+		playerScore++;
+		std::cout << "You are stronger then the dinosaur! Wtf hax." << std::endl;
+	}
+	else if (strength == dinoStrength)
+	{
+		std::cout << "You are as powerful as the dinosaur. Are you human?" << std::endl;
+	}
+	else if (strength < dinoStrength)
+	{
+		dinoScore++;
+		std::cout << "You are weaker then the dinosaur! That should be expected." << std::endl;;
+	}
+
+	int weapon = 0;
+	std::cout << "Which of the following did you take into battle?" << std::endl;
+	std::cout << "1) A sack of potatoes (Rock)" << std::endl;
+	std::cout << "2) An invisibility cape (Paper)" << std::endl;
+	std::cout << "3) The Mango Blade (Scissors)" << std::endl;
+	std::cin >> weapon;
+
+	//RPS Check
+	if (weapon == 3)
+	{
+		playerScore++;
+		std::cout << "You severed the dinosaur's tail peaking out of the cloak with the Mango Blade!" << std::endl;
+	}
+	else if (weapon == 2)
+	{
+		std::cout << "The two of you stand awkwardly while invisible." << std::endl;
+	}
+	else if (weapon == 1)
+	{
+		dinoScore++;
+		std::cout << "The dinosaur crushes you with its massive invisible weight." << std::endl;
+	}
+	else
+	{
+		dinoScore++;
+		std::cout << "What did you try grabbing? The dinosaur smites you where you stand." << std::endl;
+	}
+
+	int numBattles = 0;
+	std::cout << "How many battles have you fought?" << std::endl;
+	std::cin >> numBattles;
+
+	//Battle Check
+	if (numBattles > dinoBattles)
+	{
+		playerScore++;
+		std::cout << "Well, you have something going for ya." << std::endl;
+	}
+	else
+	{
+		dinoScore++;
+		std::cout << "This vetran dio will crush you." << std::endl;
+	}
+
+	char sleep = 'n';
+	std::cout << "Did you get enough sleep? [y/n]" << std::endl;
+	std::cin >> sleep;
+
+	//Sleep Check
+	switch (sleep)
+	{
+	case 'y':
+		std::cout << "Good." << std::endl;
+		playerScore++;
+		break;
+	case 'n':
+		std::cout << "GET MORE SLEEP!" << std::endl;
+		dinoScore++;
+		break;
+	default:
+		std::cout << "I have no words." << std::endl;
+		break;
+	}
+
+	int vitaminC = 0;
+	std::cout << "How much Vitamin C do you get everyday? (mg)" << std::endl;
+	std::cin >> vitaminC;
+
+	if (vitaminC >= 75)
+	{
+		std::cout << "Good job." << std::endl;
+		playerScore++;
+	} else{
+		dinoScore++;
+		std::cout << "EAT YOUR ORANGES." << std::endl;
+	}
 
 }
 
@@ -275,7 +403,8 @@ int main()
 {
 	//closedPractice();
 	//openPractice();
-	disposableCalculator();
+	//disposableCalculator();
+	preHistoricBattle();
 
 	system("PAUSE");
 	return 0;
