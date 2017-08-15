@@ -1,6 +1,20 @@
 #include <iostream>
 
+
 void closedPractice();
+void openPractice();
+void challenge();
+
+int main()
+{
+	//closedPractice();
+	//openPractice();
+	challenge();
+
+	system("PAUSE");
+	return 0;
+}
+
 //Closed Practice
 int sumOfTwoInts(int a, int b);
 void printHelloFunctions();
@@ -9,22 +23,6 @@ float fractionToDecimal(int num, int denom);
 float largestDiffrence(float a, float b, float c);
 void printCordinates(int a, int b);
 int sumOfThreeInts(int a, int b, int c);
-
-void openPractice();
-//Open Practice
-
-
-int main()
-{
-	//closedPractice();
-	openPractice();
-
-
-	system("PAUSE");
-	return 0;
-}
-
-//Closed Practice
 
 void closedPractice()
 {
@@ -197,3 +195,34 @@ float estimatedTimeOfArrival(int x1, int y1, int x2, int y2, int speed)
 	return distance(x1, y1, x2, y2) / speed;
 }
 
+//Challange
+float linearInterpolation(int a, int b, float normalizer);
+
+
+void challenge()
+{
+
+	std::cout << linearInterpolation(2, 4, 0.5f) << std::endl;
+	std::cout << linearInterpolation(3, 7, 0.5f) << std::endl;
+	std::cout << linearInterpolation(1, 2, 0.5f) << std::endl;
+}
+
+//Linear Interpolation
+float linearInterpolation(int a, int b, float normalizer)
+{
+	//Which is the min and which is max
+	//Subtract the min from the max and apply that diffrence to the min
+
+	int minNum = min(a, b);
+	int maxNum = max(a, b);
+
+	float diffrence = maxNum - minNum;
+
+	return (minNum + diffrence * normalizer);
+}
+
+//High and Low
+
+
+
+//ToUpper and ToLower
