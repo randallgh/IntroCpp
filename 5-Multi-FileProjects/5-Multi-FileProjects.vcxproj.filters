@@ -27,6 +27,9 @@
     <ClCompile Include="dtgreet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="rng.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="func.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="dtgreet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rng.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
