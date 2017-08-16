@@ -1,4 +1,5 @@
 #include <iostream>
+#include <random>
 
 #include "rng.h"
 
@@ -17,8 +18,16 @@ int rng()
 int rngRange(int lower, int upper)
 {
 	int generatedNum = std::rand();
+	generatedNum %= upper;
 
-	return generatedNum % upper + lower;
+	if (generatedNum < lower)
+	{
+		return generatedNum + lower;
+	} 
+	else 
+	{
+		return generatedNum;
+	}
 }
 
 bool rngBool()
@@ -35,7 +44,15 @@ bool rngBool()
 	return false;
 }
 
-bool rngBoolChance()
+
+/*
+Generates a random boolean based on a chance value.
+Accepts a single integer that represents the chance to return true.
+For example, if 50 is provided, that means that there is a 50% chance to get true.
+Returns the generated boolean value.
+
+*/
+bool rngBoolChance(int chance)
 {
-	return false;
+	return (rng() <= chance);
 }

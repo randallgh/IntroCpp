@@ -1,6 +1,7 @@
 #include <iostream>
 #include <chrono>
 
+
 #include "func.h"
 #include "mathutils.h"
 #include "dtgreet.h"
@@ -24,7 +25,7 @@ int main()
 	seedRng(seed);
 	//printf("%d \n", rng());
 	//printf("%s", rngBool() == 1 ? "true" : "false");
-	
+	printf("%d \n", rngRange(100, 1000));
 
 	system("PAUSE");
 	return 0;
