@@ -1,15 +1,21 @@
 #include <iostream>
-
+#include <time.h>
 
 void closedPractice();
 void openPractice();
 void challenge();
 
+void highLow();
+
+
+
 int main()
 {
 	//closedPractice();
 	//openPractice();
-	challenge();
+	//challenge();
+
+	highLow();
 
 	system("PAUSE");
 	return 0;
@@ -197,6 +203,8 @@ float estimatedTimeOfArrival(int x1, int y1, int x2, int y2, int speed)
 
 //Challange
 float linearInterpolation(int a, int b, float normalizer);
+char toUpper(char c);
+char toLower(char c);
 
 
 void challenge()
@@ -205,6 +213,18 @@ void challenge()
 	std::cout << linearInterpolation(2, 4, 0.5f) << std::endl;
 	std::cout << linearInterpolation(3, 7, 0.5f) << std::endl;
 	std::cout << linearInterpolation(1, 2, 0.5f) << std::endl;
+
+	std::cout << toUpper('q') << std::endl;
+	std::cout << toUpper('e') << std::endl;
+	std::cout << toUpper('I') << std::endl;
+	std::cout << toUpper('o') << std::endl;
+	std::cout << toUpper('!') << std::endl;
+
+	std::cout << toLower('q') << std::endl;
+	std::cout << toLower('e') << std::endl;
+	std::cout << toLower('I') << std::endl;
+	std::cout << toLower('o') << std::endl;
+	std::cout << toLower('!') << std::endl;
 }
 
 //Linear Interpolation
@@ -223,6 +243,38 @@ float linearInterpolation(int a, int b, float normalizer)
 
 //High and Low
 
+void highLow()
+{
+	srand(time(NULL));
+	int randomNumber = rand() % 10 + 1;
+
+	//std::cout << randomNumber << std::endl;
+	std::cout << "Enter a number." << std::endl;
+}
 
 
 //ToUpper and ToLower
+
+char toUpper(char c)
+{
+	if (c >= 97 && c <= 122)
+	{
+		return (c - 32);
+	}
+	else
+	{
+		return c;
+	}
+}
+
+char toLower(char c)
+{
+	if (c >= 65 && c <= 90)
+	{
+		return (c + 32);
+	}
+	else
+	{
+		return c;
+	}
+}
