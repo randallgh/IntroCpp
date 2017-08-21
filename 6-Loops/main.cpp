@@ -2,11 +2,13 @@
 
 void walkthrough();
 void closed();
+void open();
 
 int main() {
 	
 	//walkthrough();
-	closed();
+	//closed();
+	open();
 
 	system("PAUSE");
 	return 0;
@@ -40,6 +42,9 @@ void walkthrough()
 	while (index < 10);
 }
 
+bool isEven(int num);
+//bool isInputValid(int num);
+
 void closed()
 {
 	printf("Closed");
@@ -57,10 +62,79 @@ void closed()
 		num--;
 	}
 	//1995 - 2017 do while
+	int year = 1995;
+	do
+	{
+		printf("%d \n", year);
+		year++;
+	}
+	while (year <= 2017);
+
 	//Three favorite positive numbers with input validation
+	//Only allow positive numbers, not chars, or strings, floats,
+
+	int input = 0;
+	int numNumbers = 0;
+	int numbers[3] = {};
+	printf("Enter your favorite positive numbers. Please enter one at a time.\n>");
+	bool isRunning = true;
+	
+	do
+	{
+		if (numNumbers == 0) {
+			printf("Enter your first number. \n>");
+		}
+		else if (numNumbers == 1) {
+			printf("Enter your second number. \n>");
+		}
+		else if (numNumbers == 2) 
+		{
+			printf("Enter your third number. \n>");
+		}
+		std::cin >> input;
+
+		if (isEven(input)) 
+		{
+			numbers[numNumbers] = input;
+			numNumbers++;
+
+			if (numNumbers == 3) {
+				isRunning = false;
+			}
+		} else 
+		{
+			printf("Invalid input please enter a positive number. \n");
+		}
+
+	} while (isRunning);
+
+	printf("You entered: %d, %d, %d, as your favorite positive numbers. \n", numbers[0], numbers[1], numbers[2]);
+
 }
 
+bool isEven(int num)
+{
+	if (num % 2 == 0)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+void printXY(int x, int y);
 void open()
 {
+	printXY(1, 3);
+	printXY(4, 5);
+	printXY(0, 5);
+}
 
+void printXY(int x, int y)
+{
+	printf("X: %d, Y: %d \n", x, y);
+	for (int i = x; i <= y; i++) 
+	{
+		printf("%d \n", i);
+	}
 }
