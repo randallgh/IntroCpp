@@ -84,9 +84,55 @@ void open()
 //Find value
 bool findValue(int a[], int length, int value)
 {
+	for (int i = 0; i < length; i++) 
+	{
+		if (a[i] == value) 
+		{
+			return true;
+		}
+	}
+
+	return false;
 }
+
 //is Array unique
+bool isUnique(int a[], int b[], int length)
+{
+	for (int i = 0; i < length; i++) 
+	{
+		if (a[i] == b[i]) 
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+
 //reverse
+void reverse(int a[], int length)
+{
+	int temp = 0;
+
+	for (int i = 0; i < length/2; i++) 
+	{
+		temp = a[i];
+		a[i] = a[length - (i + 1)];
+		a[length - (i + 1)] = temp;
+
+	}
+}
+
 //Sorting ascending
+
+void sortAscending(int a[], int length)
+{
+
+}
+
 //Sorting descending
 
+void sortDescending(int a[], int length)
+{
+
+}
