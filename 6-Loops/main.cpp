@@ -97,7 +97,6 @@ void closed()
 		{
 			numbers[numNumbers] = input;
 			numNumbers++;
-
 			if (numNumbers == 3) {
 				isRunning = false;
 			}
@@ -118,16 +117,23 @@ bool isEven(int num)
 	{
 		return true;
 	}
-
 	return false;
 }
 
 void printXY(int x, int y);
+
 void open()
 {
+	//X to Y
 	printXY(1, 3);
 	printXY(4, 5);
 	printXY(0, 5);
+	//Largest of any numbers
+	//Smallest of any numbers
+	//Even or Odd
+	//Fizz Buzz
+	//Grid generator
+	//Higher or Lower
 }
 
 void printXY(int x, int y)
