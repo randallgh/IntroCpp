@@ -124,7 +124,7 @@ bool findValue(int a[], int length, int value)
 	return false;
 }
 
-//is Array unique
+//ARE TWO ARRAYS UNIQUE OF EACH OTHER
 bool isUnique(int a[], int b[], int length)
 {
 	for (int i = 0; i < length; i++) 
