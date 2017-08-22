@@ -57,5 +57,19 @@ float medianStudentTestScore(Student a[], int length)
 	//Sort
 	sortAscending(a, length);
 	//Find median
-	return 0;
+	int temp1 = 0;
+	int temp2 = 0;
+
+	if ((length % 2) == 0) {
+		temp1 = a[length / 2].lastScore;
+		temp2 = a[(length / 2) + 1].lastScore;
+
+		return (temp1 + temp2) / 2;
+	}
+	else 
+	{
+		temp1 = length / 2;
+		return a[temp1 + 1].lastScore;
+
+	}
 }
